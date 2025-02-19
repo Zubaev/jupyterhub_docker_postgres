@@ -4,7 +4,7 @@
 
 1. Дашборд активности пользователей в юпитер (количество операций в день)
 2. Дашборд по топовым тетрадкам (сколько подъедают)
-Для вычисления подъедаемой памяти ноутбуками пришлось воспользоваться скриптом ![https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/notebook_metrics/jupyterhub_notebook_files_metrics.py]
+Для вычисления подъедаемой памяти ноутбуками пришлось воспользоваться [скриптом](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/notebook_metrics/jupyterhub_notebook_files_metrics.py)
 ![jupyter](https://github.com/user-attachments/assets/7f9e683e-f394-45a3-a859-d0ee179101d8)
 
 4. Дашборд топовых таблиц в постресе с их владельцами
