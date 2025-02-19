@@ -30,12 +30,6 @@
 
 Здесь я воспользовался методом который описан на каждом втором сайте (Даже вконтакте есть статья) единственные изменения которые я внес, это добавил в конечный скрипт отправителя 
 
-if [ -n "$SSH_CLIENT" ]; then
-    TEXT="$(date): ssh login to ${USER}@$(hostname -f)"
-    TEXT="$TEXT from $(echo $SSH_CLIENT | awk '{print $1}')"
-    echo "$TEXT" | mail -s "ssh login" 'magazubaev92@gmail.com' -a "From:magazubaev92@yandex.ru"
-fi
-
 ![Алерт ssh](https://github.com/user-attachments/assets/d3987bad-17f4-4622-bddb-4a897e64dfc5)
 
 
