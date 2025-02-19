@@ -6,7 +6,7 @@
 2. Дашборд по топовым тетрадкам (сколько подъедают).
    
 2.1 Для вычисления подъедаемой памяти ноутбуками пришлось воспользоваться самодельным exporter (Благо базовые знания python в сумме с ИИ) родили сей 
-[чудо](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/notebook_metrics/jupyterhub_notebook_files_metrics.py) на свет
+[чудо](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/notebook_metrics/jupyterhub_notebook_files_metrics.py) на свет, он не идеален в прод врядли пойдет, но я его все равно люблю)))) как он работает можно разобраться по коментариям в самом скрипте
 ![jupyter](https://github.com/user-attachments/assets/7f9e683e-f394-45a3-a859-d0ee179101d8)
 
 4. Дашборд топовых таблиц в постресе с их владельцами
