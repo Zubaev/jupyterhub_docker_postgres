@@ -15,7 +15,7 @@ receivers:
     from: 'magazubaev92@yandex.ru' 
     smarthost: 'smtp.yandex.ru:587'
     auth_username: 'magazubaev92@yandex.ru'
-    auth_password: 'wxxhjhvlvpvyuehq' 
+    auth_password: '' 
     auth_secret: '' 
     tls_config:
       insecure_skip_verify: false 
