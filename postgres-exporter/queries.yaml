@@ -1,0 +1,32 @@
+table_sizes:
+  query: |
+    SELECT 
+        n.nspname AS schema_name,
+        c.relname AS table_name,
+        pg_total_relation_size(c.oid) AS size_bytes,
+        r.rolname AS owner
+    FROM 
+        pg_catalog.pg_class c
+    JOIN 
+        pg_catalog.pg_namespace n ON c.relnamespace = n.oid
+    JOIN 
+        pg_roles r ON c.relowner = r.oid
+    WHERE 
+        n.nspname = 'public'
+        AND c.relkind = 'r'
+    ORDER BY 
+        size_bytes DESC
+    LIMIT 10;
+  metrics:
+    - schema_name:
+        usage: "LABEL"
+        description: "Name of the schema"
+    - table_name:
+        usage: "LABEL"
+        description: "Name of the table"
+    - size_bytes:
+        usage: "GAUGE"
+        description: "Size of the table in bytes"
+    - owner:
+        usage: "LABEL"
+        description: "Owner of the table"

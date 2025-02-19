@@ -1,0 +1,115 @@
+services:
+  db_postgres:
+    image: postgres:16
+    volumes:
+    - Pgdata:/var/lib/postgresql/data
+    container_name: zubaev
+    environment:
+      POSTGRES_USER: zms
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_DB: test_db
+    ports:
+      - "5434:5432"
+    restart: unless-stopped
+    networks:
+      - jupyter-network
+  
+  postgres_exporter:
+    image: prometheuscommunity/postgres-exporter:v0.10.0
+    ports:
+      - "9187:9187"
+    environment:
+      DATA_SOURCE_NAME: "postgresql://zms:123456@db_postgres:5432/test_db?sslmode=disable"
+      PG_EXPORTER_EXTEND_QUERY_PATH: "/etc/postgres_exporter/queries.yaml"
+    volumes:
+      - ./postgres-exporter/queries.yaml:/etc/postgres-exporter/queries.yaml 
+    command: ["--extend.query-path=/etc/postgres-exporter/queries.yaml"]
+    depends_on:
+      - db_postgres
+    restart: unless-stopped 
+    networks:
+      - jupyter-network  
+
+  jupyterhub:
+    build: 
+      context: ./jupyterhub
+      dockerfile: Dockerfile
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - jupyterhub_data:/srv/jupyterhub/data
+      - ./jupyterhub/jupyterhub_config.py:/srv/jupyterhub/jupyterhub_config.py
+    ports:
+      - "8000:8000"
+      - "8083:8083"
+    networks:
+      - jupyter-network
+
+  jupyterhub-metrics-exporter:
+    build:
+      context: ./notebook_metrics 
+      dockerfile: Dockerfile 
+    container_name: jupyterhub-metrics-exporter
+    ports:
+      - "8085:8085"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - jupyter-network
+
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+      - ./alerts:/etc/prometheus/alerts
+    networks: 
+      - jupyter-network
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    volumes:
+      - grafana-storage:/var/lib/grafana
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin 
+    networks:
+      - jupyter-network
+
+  cadvisor:
+    image: gcr.io/cadvisor/cadvisor:latest
+    container_name: cadvisor
+    devices:
+      - /dev/kmsg:/dev/kmsg
+    ports:
+      - "8081:8080"
+    volumes:
+      - /:/rootfs:ro
+      - /var/run:/var/run:rw
+      - /sys:/sys:ro
+      - /var/lib/docker/:/var/lib/docker:ro
+      - /dev/disk/:/dev/disk:ro
+    networks:
+      - jupyter-network
+
+  alertmanager:
+    image: prom/alertmanager:v0.25.0
+    container_name: alertmanager
+    ports:
+      - "9093:9093"
+    volumes:
+      - ./alerts/alertmanager.yml:/etc/alertmanager/alertmanager.yml
+    networks:
+      - jupyter-network
+
+volumes:
+  grafana-storage:
+  jupyterhub_data:
+  Pgdata:
+
+networks:
+  jupyter-network:
+    name: jupyter-network
