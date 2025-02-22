@@ -1,6 +1,6 @@
 # Оглавление
 - [Домашняя работа №1](#домашняя-работа-1)
-  - [Настройка jupyterhub](#настройка-jupyterhub)
+  - [Настройка jupyterhub и Postgres](#настройка-jupyterhub-и-postgres)
   - [Подзаголовок 1.2](#подзаголовок-12)
 - [Заголовок 2](#заголовок-2)
 
@@ -60,7 +60,7 @@ sc;[sc;s
 цвцвцв
 
 cs;[c;s[c;
-## Настройка jupyterhub 
+## Настройка jupyterhub и Postgres
 
 ```yaml
 services:
