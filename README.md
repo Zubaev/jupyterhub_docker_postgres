@@ -62,32 +62,8 @@ sc;[sc;s
 cs;[c;s[c;
 ## Настройка jupyterhub и Postgres
 
-```
-FROM jupyterhub/jupyterhub:latest
-
-RUN pip install --no-cache \
-    oauthenticator \
-    dockerspawner \
-    jupyterhub-nativeauthenticator
-```
-
-```
-FROM jupyter/minimal-notebook:latest
-
-USER root
-
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends \
-    libpq-dev gcc && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
-
-RUN pip install --no-cache-dir psycopg2-binary
-
-USER jovyan
-
-CMD ["start-notebook.sh"]
-```
+[Dockerfile]([https://www.example.com](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/jupyterhub/Dockerfile))
+[jupyterhub_config.py]([https://www.example.com](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/jupyterhub/jupyterhub_config.py))
 
 ```yaml
 services:
