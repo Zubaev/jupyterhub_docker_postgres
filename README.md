@@ -62,6 +62,7 @@ sc;[sc;s
 cs;[c;s[c;
 ## Настройка jupyterhub 
 
+```yaml
 services:
   db_postgres:
     image: postgres:16
