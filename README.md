@@ -62,6 +62,16 @@ sc;[sc;s
 cs;[c;s[c;
 ## Настройка jupyterhub и Postgres
 
+```
+FROM jupyterhub/jupyterhub:latest
+
+
+RUN pip install --no-cache \
+    oauthenticator \
+    dockerspawner \
+    jupyterhub-nativeauthenticator
+
+
 ```yaml
 services:
   db_postgres:
