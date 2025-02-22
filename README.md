@@ -62,7 +62,7 @@ sc;[sc;s
 cs;[c;s[c;
 ## Настройка jupyterhub и Postgres
 
-За онову взят базовый образ jupyterhub и установить в него необходимые нам библиотеки для расширения функциональности JupyterHub. Ниже приведены описания каждой из установленных библиотек:
+За онову взят базовый образ jupyterhub и на его основе собран Dockerfile [Dockerfile](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/jupyterhub/Dockerfile)
 
 В образ добавлены следующие библиотеки, каждая из которых выполняет свою уникальную роль:
 
@@ -86,7 +86,7 @@ cs;[c;s[c;
 Описание : Библиотека для интеграции с системой мониторинга Prometheus.
 Назначение : Помогает администраторам собирать метрики производительности и состояния системы, что необходимо для оптимизации работы JupyterHub.
 
-[Dockerfile](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/jupyterhub/Dockerfile)
+
 
 [jupyterhub_config.py](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/jupyterhub/jupyterhub_config.py)
 
