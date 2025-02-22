@@ -70,7 +70,7 @@ RUN pip install --no-cache \
     oauthenticator \
     dockerspawner \
     jupyterhub-nativeauthenticator
-
+```
 
 ```yaml
 services:
