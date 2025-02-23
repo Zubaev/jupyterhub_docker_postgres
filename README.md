@@ -29,7 +29,7 @@
 
 Был взят базовый образ jupyterhub и на его основе составлен [Dockerfile](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/jupyterhub/Dockerfile) для сборки кастомного образа в который добавлены следующие библиотеки:
 
-- **1. oauthenticator** - 
+- **1. `oauthenticator`** - 
 Библиотека для аутентификации пользователей через протокол OAuth2.
 Позволяет пользователям авторизовываться через внешние провайдеры (например, GitHub, Google, Microsoft), что упрощает управление учётными записями.
 - **3. dockerspawner** - 
