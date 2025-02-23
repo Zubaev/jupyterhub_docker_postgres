@@ -158,5 +158,9 @@ networks:
 
 Пропишем все необходимые jobs в конфигурационный файл [prometheus.yml](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/prometheus/prometheus.yml)
 
+Проверим работу всех exporter в prometheus/target
+
+![2025-02-23_16-55-41](https://github.com/user-attachments/assets/93feb05f-444b-40b0-9834-63a406e45147)
+
 
 
