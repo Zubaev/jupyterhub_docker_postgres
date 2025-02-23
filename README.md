@@ -160,7 +160,7 @@ networks:
 
 Для `prometheuscommunity/postgres-exporter:v0.10.0` необходимо настроить файл [queries.yaml](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/postgres-exporter/queries.yaml) который содержит конфигурацию будущей метрики и запрос в базу данных
 
-Для `prom/alertmanager:v0.25.0` необходимо так же настроить файлы [alertmanager.yml](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/alerts/alertmanager.yml) и [example.rules.yml](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/alerts/example.rules.yml) 
+Для `prom/alertmanager:v0.25.0` необходимо так же настроить файлы [alertmanager.yml](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/alerts/alertmanager.yml)
 
 
 ```yaml
@@ -169,7 +169,11 @@ smarthost: 'smtp.yandex.ru:587' #это протокол передачи поч
     auth_password: '**пароль-приложение** ' #пароль приложение необходимо сгенерировать для почты
 ```
 
+[example.rules.yml](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/alerts/example.rules.yml) 
 
+```yaml
+    expr: sum(rate(container_cpu_usage_seconds_total{image!=""}[1m])) * 100 > 80 #Если общее использование CPU превышает 80%, срабатывает алерт.
+```
 Проверим работу всех exporter в prometheus/target
 
 ![2025-02-23_16-55-41](https://github.com/user-attachments/assets/93feb05f-444b-40b0-9834-63a406e45147)
