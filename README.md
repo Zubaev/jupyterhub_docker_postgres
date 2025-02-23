@@ -164,9 +164,12 @@ networks:
 
 alertmanager.yml
 ```yaml
-smarthost: 'smtp.yandex.ru:587' #это протокол передачи почты
-    auth_username: 'magazubaev92@yandex.ru' #почта с которой будут отправляться уведомления
-    auth_password: '**пароль-приложение** ' #пароль приложение необходимо сгенерировать для почты
+  email_configs:
+  - to: 'magazubaev92@gmail.com' #Почта получателя Алерта 
+    from: 'magazubaev92@yandex.ru' #Почта с которой будет отправляться Алерт
+    smarthost: 'smtp.yandex.ru:587' # Адрес SMTP-сервера и порт для отправки писем
+    auth_username: 'magazubaev92@yandex.ru'  # Электронная почта, с которой будут отправляться уведомления
+    auth_password: 'Пароль приложения' # Пароль приложения (необходимо сгенерировать в настройках аккаунта Yandex)
 ```
 
 example.rules.yml
