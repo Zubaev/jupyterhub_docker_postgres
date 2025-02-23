@@ -140,7 +140,7 @@ networks:
 
 `prometheuscommunity/postgres-exporter:v0.10.0` - Exporter для сбора метрик PostgreSQL. Преобразует статистику PostgreSQL в формат, понятный Prometheus.
 
-`jupyterhub-metrics-exporter` - Кастомный exporter который собирает данные о размерах тетрадок jupyterhub и преобразует их в формат Prometheus.
+`jupyterhub-metrics-exporter` - Кастомный [exporter](notebook_metrics/jupyterhub_notebook_files_metrics.py) который собирает данные о размерах тетрадок jupyterhub и преобразует их в формат Prometheus.
 
 `gcr.io/cadvisor/cadvisor:latest` - Инструмент для анализа использования ресурсов и выполнения контейнеров. Автоматически обнаруживает все контейнеры на хосте и собирает статистику об их работе.
 
@@ -154,7 +154,9 @@ networks:
 
 ***
 
-Допишем все необходимые образы в наш [Docker-compose](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/docker-compose.yaml)
+Допишем все необходимые образы в [Docker-compose](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/docker-compose.yaml) 
+
+Для работы 
 
 
 
