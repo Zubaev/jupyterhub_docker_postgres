@@ -158,9 +158,9 @@ networks:
 
 Пропишем все необходимые jobs в конфигурационный файл [prometheus.yml](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/prometheus/prometheus.yml)
 
-Для `prometheuscommunity/postgres-exporter:v0.10.0` необходимо настроить файл **`queries.yaml`** который содержит конфигурацию будущей метрики и запрос в базу данных
+Для работы с образом **`prometheuscommunity/postgres-exporter:v0.10.0`** требуется настроить файл **`queries.yaml`**. Этот файл содержит конфигурацию пользовательских метрик и соответствующие SQL-запросы, которые будут выполняться для сбора данных из базы данных PostgreSQL.
 
-[queries.yaml](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/postgres-exporter/queries.yaml)
+**[queries.yaml](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/postgres-exporter/queries.yaml)**
 ```yaml
 
 table_sizes:  #название метрики
