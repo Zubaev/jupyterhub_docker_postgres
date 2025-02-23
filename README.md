@@ -221,6 +221,7 @@ table_sizes:  #название метрики
 
 
 Дашборд размера таблиц в PostgreSQL, а так же динамика добавления данных в таблицы, гистаграммы отражают размер таблиц, а временной ряд показывает когда в таблицы добавлялись данные и в каком объеме
+
 Метрика:
 - table_sizes_size_bytes - была определена внутри **[queries.yaml](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/postgres-exporter/queries.yaml)**
 
