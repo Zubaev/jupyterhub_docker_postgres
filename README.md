@@ -10,9 +10,9 @@
 
 # Домашняя работа №1
 
-## Настройка jupyterhub и Postgres
+## 1. Настройка jupyterhub и Postgres
 
-### 1. Сборка кастомного образа jupyterhub.
+### 1.1 Сборка кастомного образа jupyterhub.
 
 Был взят базовый образ jupyterhub, и на его основе составлен [Dockerfile](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/jupyterhub/Dockerfile) для сборки кастомного образа в который добавлены следующие библиотеки:
 
@@ -29,7 +29,7 @@
 Библиотека для интеграции с системой мониторинга Prometheus.
 Помогает администраторам собирать метрики производительности и состояния системы, что необходимо для оптимизации работы JupyterHub.
 ***
-### 2. Основные методы и настройки Jupyterhub описаны в конфигурационным файлом [jupyterhub_config.py](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/jupyterhub/jupyterhub_config.py) который определяет настройки и поведение JupyterHub-сервера.
+### 1.2. Основные методы и настройки Jupyterhub описаны в конфигурационным файлом [jupyterhub_config.py](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/jupyterhub/jupyterhub_config.py) который определяет настройки и поведение JupyterHub-сервера.
 
 Аутентификация :
 - c.JupyterHub.authenticator_class = NativeAuthenticator: Используется локальный аутентификатор NativeAuthenticator, который позволяет пользователям регистрироваться через форму с логином и паролем.
