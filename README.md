@@ -158,6 +158,10 @@ networks:
 
 Пропишем все необходимые jobs в конфигурационный файл [prometheus.yml](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/prometheus/prometheus.yml)
 
+Для `prometheuscommunity/postgres-exporter:v0.10.0` необходимо настроить файл [queries.yaml](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/postgres-exporter/queries.yaml) который содержит конфигурацию будущей метрики и запрос в базу данных
+
+Для `prom/alertmanager:v0.25.0` необходимо так же настроить файлы [alertmanager.yml](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/alerts/alertmanager.yml) и [example.rules.yml](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/alerts/example.rules.yml)
+
 Проверим работу всех exporter в prometheus/target
 
 ![2025-02-23_16-55-41](https://github.com/user-attachments/assets/93feb05f-444b-40b0-9834-63a406e45147)
