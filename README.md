@@ -160,6 +160,19 @@ networks:
 
 Для `prometheuscommunity/postgres-exporter:v0.10.0` необходимо настроить файл [queries.yaml](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/postgres-exporter/queries.yaml) который содержит конфигурацию будущей метрики и запрос в базу данных
 
+```yaml
+
+table_sizes:  #название метрики
+  query: |; #содержит запрос в базу даных                 
+  metrics:    #Определение метрик, которые будут использоваться для обработки и представления данных, полученных из запроса.
+    - schema_name:             
+        usage: "LABEL"
+        description: "Name of the schema"
+
+```
+
+
+
 Для `prom/alertmanager:v0.25.0` необходимо настроить файлы [alertmanager.yml](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/alerts/alertmanager.yml) и [example.rules.yml](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/alerts/example.rules.yml)
 
 alertmanager.yml
