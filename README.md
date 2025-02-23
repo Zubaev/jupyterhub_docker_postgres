@@ -200,7 +200,7 @@ table_sizes:  #название метрики
 
 Убедимся, что `State` у всех `exporter` имеет статус UP 
 
-![2025-02-23_16-55-41](https://github.com/user-attachments/assets/93feb05f-444b-40b0-9834-63a406e45147)
+![2025-02-23_18-27-32](https://github.com/user-attachments/assets/8e433c92-d37c-484c-8c7a-1a70c54e23a6)
 
 В адресной строке введем `http://localhost:3000` чтобы попасть в интерфейс `Grafana` по умолчанию ЛОГИН `admin` ПАРОЛЬ `admin` после система предложит вам изменить пароль, заходим и добавляем `prometheus` как источник данных 
 
