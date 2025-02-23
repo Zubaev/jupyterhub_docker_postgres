@@ -77,7 +77,9 @@ networks:
   jupyter-network:
     name: jupyter-network
 ```
+***
 Скриншот регистрации нового пользователя
+
 ![2025-02-23_12-15-28](https://github.com/user-attachments/assets/5adf3368-138a-4ee7-bd18-d04762a56f8c)
 
 
