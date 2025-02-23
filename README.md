@@ -82,9 +82,13 @@ networks:
 
 ![2025-02-23_12-15-28](https://github.com/user-attachments/assets/5adf3368-138a-4ee7-bd18-d04762a56f8c)
 
-Список зарегестрированных пользователей 
+Список зарегистрированных пользователей 
 
 ![2025-02-23_12-22-58](https://github.com/user-attachments/assets/43c0fcd2-d77e-44b6-82ff-9d11ad7a4cd8)
+
+Создание таблицы в Postgres через Jupyterhub 
+
+![2025-02-23_12-40-58](https://github.com/user-attachments/assets/9a935283-c2c0-4817-8a32-accd323e8d9e)
 
 
 
