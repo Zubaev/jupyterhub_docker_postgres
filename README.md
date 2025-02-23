@@ -156,7 +156,7 @@ networks:
 
 Допишем все необходимые образы в [Docker-compose](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/docker-compose.yaml) 
 
-Для корректной работы Prometheus необходимо прописать все необходимые scrape jobs в конфигурационный файл [prometheus.yml](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/prometheus/prometheus.yml). Этот файл определяет, какие сервисы и эндпоинты Prometheus должен мониторить для сбора метрик. 
+Для корректной работы **`Prometheus`** необходимо прописать все необходимые `scrape jobs` в конфигурационный файл **`[prometheus.yml](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/prometheus/prometheus.yml)`**. Этот файл определяет, какие сервисы и эндпоинты Prometheus должен мониторить для сбора метрик. 
 
 Для работы с образом **`prometheuscommunity/postgres-exporter:v0.10.0`** требуется настроить файл **`queries.yaml`**. Этот файл содержит конфигурацию пользовательских метрик и соответствующие SQL-запросы, которые будут выполняться для сбора данных из базы данных PostgreSQL.
 
