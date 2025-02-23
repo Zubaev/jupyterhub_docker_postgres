@@ -190,6 +190,11 @@ table_sizes:  #название метрики
 ```yaml
     expr: sum(rate(container_cpu_usage_seconds_total{image!=""}[1m])) * 100 > 80 #Если общее использование CPU превышает 80%, срабатывает алерт.
 ```
+
+Соберем наш образ командой  `Docker-compose up -d`
+И убедимся, что все работает.
+<img width="392" alt="Снимок экрана 2025-02-23 175244" src="https://github.com/user-attachments/assets/04073b3f-ac46-4264-a83d-3dda058ecd2d" />
+
 Проверим работу всех exporter в prometheus/target
 
 ![2025-02-23_16-55-41](https://github.com/user-attachments/assets/93feb05f-444b-40b0-9834-63a406e45147)
