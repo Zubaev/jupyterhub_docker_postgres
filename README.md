@@ -137,11 +137,11 @@ networks:
 
 так же для экспорта необходимых метрик будем использовать следующие экспортеры
 
-**- prometheuscommunity/postgres-exporter:v0.10.0** #tnj
+** - prometheuscommunity/postgres-exporter:v0.10.0**
 
-**- jupyterhub-metrics-exporter** #tnj
+** - jupyterhub-metrics-exporter**
 
-**- gcr.io/cadvisor/cadvisor:latest** #xtnj
+** - gcr.io/cadvisor/cadvisor:latest**
 
 для построения дашбордов 
 
