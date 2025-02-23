@@ -173,9 +173,9 @@ table_sizes:  #название метрики
 
 
 
-Для `prom/alertmanager:v0.25.0` необходимо настроить файлы [alertmanager.yml](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/alerts/alertmanager.yml) и [example.rules.yml](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/alerts/example.rules.yml)
+Для `prom/alertmanager:v0.25.0` необходимо настроить файлы:
 
-alertmanager.yml
+[alertmanager.yml](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/alerts/alertmanager.yml)
 ```yaml
   email_configs:
   - to: 'magazubaev92@gmail.com' #Почта получателя Алерта 
@@ -185,7 +185,7 @@ alertmanager.yml
     auth_password: 'Пароль приложения' # Пароль приложения (необходимо сгенерировать в настройках аккаунта Yandex)
 ```
 
-example.rules.yml
+[example.rules.yml](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/alerts/example.rules.yml)
 
 ```yaml
     expr: sum(rate(container_cpu_usage_seconds_total{image!=""}[1m])) * 100 > 80 #Если общее использование CPU превышает 80%, срабатывает алерт.
