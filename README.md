@@ -209,7 +209,14 @@ table_sizes:  #название метрики
 
 
 Дашборд Активности пользователей и Размера тетрадок Jupyterhub.
-![2025-02-23_18-21-34](https://github.com/user-attachments/assets/c2c9cfde-30e3-4d3a-ad51-21d4f28fadbe)
+Метрики:
+- jupyterhub_total_users - количество зарегистрированых пользователей
+- jupyterhub_active_users{period="24h"} - количество активных пользователей за 24 часа
+- jupyterhub_running_servers - количество запушенных серверов
+- sum(jupyterhub_request_duration_seconds_count) - количество запросов
+- Размер ноутбуков кастомная метрика
+![2025-02-23_18-56-03](https://github.com/user-attachments/assets/81e2b3ae-ae0b-46a5-91f7-cdb752cb10c0)
+
 
 
 Дашборд размера таблиц в PostgreSQL, а так же динамика добавления данных в таблицы, гистаграммы отражают размер таблиц, а временной ряд показывает когда в таблицы добавлялись данные и в каком объеме
