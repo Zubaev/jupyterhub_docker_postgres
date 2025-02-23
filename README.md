@@ -160,7 +160,14 @@ networks:
 
 Для `prometheuscommunity/postgres-exporter:v0.10.0` необходимо настроить файл [queries.yaml](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/postgres-exporter/queries.yaml) который содержит конфигурацию будущей метрики и запрос в базу данных
 
-Для `prom/alertmanager:v0.25.0` необходимо так же настроить файлы [alertmanager.yml](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/alerts/alertmanager.yml) и [example.rules.yml](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/alerts/example.rules.yml)
+Для `prom/alertmanager:v0.25.0` необходимо так же настроить файлы [alertmanager.yml](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/alerts/alertmanager.yml) и [example.rules.yml](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/alerts/example.rules.yml) 
+
+
+``
+smarthost: 'smtp.yandex.ru:587' # это протокол передачи почты
+    auth_username: 'magazubaev92@yandex.ru' #почта с которой будут отправляться уведомления
+    auth_password: '**пароль-приложение** ' #пароль приложение необходимо сгенерировать для почты
+``
 
 Проверим работу всех exporter в prometheus/target
 
