@@ -156,7 +156,7 @@ networks:
 
 Допишем все необходимые образы в [Docker-compose](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/docker-compose.yaml) 
 
-Для работы 
+Пропишем все необходимые jobs в конфигурационный файл [prometheus.yml](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/prometheus/prometheus.yml)
 
 
 
