@@ -45,11 +45,11 @@
 Основные методы и настройки Jupyterhub описаны конфигурационным файлом [jupyterhub_config.py](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/jupyterhub/jupyterhub_config.py) который определяет настройки и поведение JupyterHub-сервера.
 
 Аутентификация :
-- c.JupyterHub.authenticator_class = NativeAuthenticator: Используется локальный аутентификатор NativeAuthenticator, который позволяет пользователям регистрироваться через форму с логином и паролем.
+- `c.JupyterHub.authenticator_class` = `NativeAuthenticator`: Используется локальный аутентификатор `NativeAuthenticator`, который позволяет пользователям регистрироваться через форму с логином и паролем.
 
-- c.NativeAuthenticator.open_signup = True: Разрешает новым пользователям самостоятельно регистрироваться на платформе.
+- `c.NativeAuthenticator.open_signup` = `True`: Разрешает новым пользователям самостоятельно регистрироваться на платформе.
 
-- c.JupyterHub.spawner_class = DockerSpawner: Используется спонер DockerSpawner, который запускает отдельный Docker-контейнер для каждого пользователя.
+- `c.JupyterHub.spawner_class` = `DockerSpawner`: Используется спонер DockerSpawner, который запускает отдельный Docker-контейнер для каждого пользователя.
 
 ***
 **Postgres** взят оффициальный образ postgres:16
