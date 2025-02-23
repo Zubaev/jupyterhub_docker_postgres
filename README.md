@@ -62,7 +62,7 @@ sc;[sc;s
 cs;[c;s[c;
 ## Настройка jupyterhub и Postgres
 
-За онову взят базовый образ jupyterhub и на его основе собран [Dockerfile](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/jupyterhub/Dockerfile)
+Был взят базовый образ jupyterhub, и на его основе составлен [Dockerfile](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/jupyterhub/Dockerfile) для сборки кастомного образа.
 
 В образ добавлены следующие библиотеки:
 
