@@ -16,7 +16,7 @@
 ***
 Необходимо:
 
-1. развернуть jupyterhub и Postgres.
+1. Развернуть jupyterhub и Postgres.
 
 2. Зарегестрировать 3 пользователей в jupyterhub.
 
