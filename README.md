@@ -82,4 +82,9 @@ networks:
 
 ![2025-02-23_12-15-28](https://github.com/user-attachments/assets/5adf3368-138a-4ee7-bd18-d04762a56f8c)
 
+Список зарегестрированных пользователей 
+
+![2025-02-23_12-22-58](https://github.com/user-attachments/assets/43c0fcd2-d77e-44b6-82ff-9d11ad7a4cd8)
+
+
 
