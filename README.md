@@ -215,12 +215,15 @@ table_sizes:  #название метрики
 - jupyterhub_active_users{period="24h"} - количество активных пользователей за 24 часа
 - jupyterhub_running_servers - количество запушенных серверов
 - sum(jupyterhub_request_duration_seconds_count) - количество запросов
-- jupyterhub_notebook_file_size_bytes - кастомная метрика
+- jupyterhub_notebook_file_size_bytes - кастомная метрика [exporter](notebook_metrics/jupyterhub_notebook_files_metrics.py)
 ![2025-02-23_18-56-03](https://github.com/user-attachments/assets/81e2b3ae-ae0b-46a5-91f7-cdb752cb10c0)
 
 
 
 Дашборд размера таблиц в PostgreSQL, а так же динамика добавления данных в таблицы, гистаграммы отражают размер таблиц, а временной ряд показывает когда в таблицы добавлялись данные и в каком объеме
+Метрика:
+- table_sizes_size_bytes - была определена внутри **[queries.yaml](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/postgres-exporter/queries.yaml)**
+
 ![2025-02-23_18-35-23](https://github.com/user-attachments/assets/816040f1-cc21-482e-b293-d107974da18e)
 
 Дашборд используемых ресурсов контейнерами 
