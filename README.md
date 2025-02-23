@@ -154,11 +154,12 @@ networks:
 
 ***
 
-Допишем все необходимые образы в [Docker-compose](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/docker-compose.yaml) 
+1. Для создания полнофункциональной системы мониторинга на основе `Prometheus` и `Grafana` допишем все необходимые образы в [Docker-compose](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/docker-compose.yaml) 
 
-Для корректной работы **`Prometheus`** необходимо прописать все `scrape jobs` в конфигурационный файл **[prometheus.yml](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/prometheus/prometheus.yml)**. Этот файл определяет, какие сервисы и эндпоинты Prometheus должен мониторить для сбора метрик. 
 
-Для работы с образом **`prometheuscommunity/postgres-exporter:v0.10.0`** требуется настроить файл **`queries.yaml`**. Этот файл содержит конфигурацию пользовательских метрик и соответствующие SQL-запросы, которые будут выполняться для сбора данных из базы данных PostgreSQL.
+2. Для корректной работы **`Prometheus`** необходимо прописать все `scrape jobs` в конфигурационный файл **[prometheus.yml](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/prometheus/prometheus.yml)**. Этот файл определяет, какие сервисы и эндпоинты Prometheus должен мониторить для сбора метрик. 
+
+3. Для работы с образом **`prometheuscommunity/postgres-exporter:v0.10.0`** требуется настроить файл **`queries.yaml`**. Этот файл содержит конфигурацию пользовательских метрик и соответствующие SQL-запросы, которые будут выполняться для сбора данных из базы данных PostgreSQL.
 
 **[queries.yaml](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/postgres-exporter/queries.yaml)**
 ```yaml
@@ -172,7 +173,7 @@ table_sizes:  #название метрики
 
 ```
 
-Для `prom/alertmanager:v0.25.0` необходимо настроить файлы **`alertmanager.yml`** и **`example.rules.yml`**
+4. Для `prom/alertmanager:v0.25.0` необходимо настроить файлы **`alertmanager.yml`** и **`example.rules.yml`**
 
 [alertmanager.yml](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/alerts/alertmanager.yml)
 ```yaml
