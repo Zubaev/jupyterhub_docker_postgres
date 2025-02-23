@@ -41,8 +41,6 @@
 ***
 **Postgres** взят оффициальный образ postgres:16
 ***
-
-***
 Для взаимодействия Postgres и Jupyterhub на основе базового образа составлен [Dockerfile](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/notebook_custom/Dockerfile.not) для сборки кастомного образа с библиотекой psycopg2-binary которая позволяет сооединяться тетрадкам jupyterhub c Postgres
 ***
 
