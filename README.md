@@ -211,3 +211,4 @@ table_sizes:  #название метрики
 Построим Дашборд Активности пользователей и Размера тетрадок Jupyterhub.
 ![2025-02-23_18-21-34](https://github.com/user-attachments/assets/c2c9cfde-30e3-4d3a-ad51-21d4f28fadbe)
 
+
