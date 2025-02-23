@@ -198,7 +198,7 @@ table_sizes:  #название метрики
 Перейдем по адресу `http://localhost:9090/targets`
 Проверим работу всех exporter в prometheus.
 
-Убедимся, что `State` у всех сервисов имеет статус UP 
+Убедимся, что `State` у всех `exporter` имеет статус UP 
 
 ![2025-02-23_16-55-41](https://github.com/user-attachments/assets/93feb05f-444b-40b0-9834-63a406e45147)
 
