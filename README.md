@@ -133,23 +133,23 @@ networks:
 
 Для сбора метрик используем:
 
-**- Prometheus**
+`Prometheus`
 
 так же для экспорта необходимых метрик будем использовать следующие экспортеры
 
-** - prometheuscommunity/postgres-exporter:v0.10.0**
+`prometheuscommunity/postgres-exporter:v0.10.0`
 
-** - jupyterhub-metrics-exporter**
+`jupyterhub-metrics-exporter`
 
-** - gcr.io/cadvisor/cadvisor:latest**
+`gcr.io/cadvisor/cadvisor:latest`
 
 для построения дашбордов 
 
-- Grafana 
+`Grafana` 
 
 Для алертов
 
-**- prom/alertmanager:v0.25.0**
+`prom/alertmanager:v0.25.0`
 
 
 
