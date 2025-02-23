@@ -215,7 +215,7 @@ table_sizes:  #название метрики
 - jupyterhub_active_users{period="24h"} - количество активных пользователей за 24 часа
 - jupyterhub_running_servers - количество запушенных серверов
 - sum(jupyterhub_request_duration_seconds_count) - количество запросов
-- Размер ноутбуков кастомная метрика
+- jupyterhub_notebook_file_size_bytes - кастомная метрика
 ![2025-02-23_18-56-03](https://github.com/user-attachments/assets/81e2b3ae-ae0b-46a5-91f7-cdb752cb10c0)
 
 
