@@ -38,6 +38,9 @@
 
 - c.JupyterHub.spawner_class = DockerSpawner: Используется спонер DockerSpawner, который запускает отдельный Docker-контейнер для каждого пользователя.
 
+***
+**Postgres** взят оффициальный образ postgres:16
+
 
 ```yaml
 services:
