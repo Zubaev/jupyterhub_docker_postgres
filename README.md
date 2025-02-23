@@ -62,10 +62,9 @@ sc;[sc;s
 cs;[c;s[c;
 ## Настройка jupyterhub и Postgres
 
-1. Был взят базовый образ jupyterhub, и на его основе составлен [Dockerfile](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/jupyterhub/Dockerfile) для сборки кастомного образа в который добавлены следующие библиотеки:
+### 1. Был взят базовый образ jupyterhub, и на его основе составлен [Dockerfile](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/jupyterhub/Dockerfile) для сборки кастомного образа в который добавлены следующие библиотеки:
 
 **1. oauthenticator**
-
 Библиотека для аутентификации пользователей через протокол OAuth2.
 Позволяет пользователям авторизовываться через внешние провайдеры (например, GitHub, Google, Microsoft), что упрощает управление учётными записями.
 
@@ -83,11 +82,13 @@ cs;[c;s[c;
 Библиотека для интеграции с системой мониторинга Prometheus.
 Помогает администраторам собирать метрики производительности и состояния системы, что необходимо для оптимизации работы JupyterHub.
 
-2. Основные методы и настройки Jupyterhub описаны в конфигурационным файлом [jupyterhub_config.py](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/jupyterhub/jupyterhub_config.py) который определяет настройки и поведение JupyterHub-сервера.
+### 2. Основные методы и настройки Jupyterhub описаны в конфигурационным файлом [jupyterhub_config.py](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/jupyterhub/jupyterhub_config.py) который определяет настройки и поведение JupyterHub-сервера.
 
 Аутентификация :
 c.JupyterHub.authenticator_class = NativeAuthenticator: Используется локальный аутентификатор NativeAuthenticator, который позволяет пользователям регистрироваться через форму с логином и паролем.
+
 c.NativeAuthenticator.open_signup = True: Разрешает новым пользователям самостоятельно регистрироваться на платформе.
+
 c.JupyterHub.spawner_class = DockerSpawner: Используется спонер DockerSpawner, который запускает отдельный Docker-контейнер для каждого пользователя.
 
 
