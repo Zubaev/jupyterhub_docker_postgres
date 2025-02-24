@@ -311,3 +311,21 @@ sudo nano /etc/postfix/main.cf
 ```bash
 relayhost = [smtp.yandex.ru]:587 #если вы используете yandex
 ```
+
+Ниже этой строки добавьте следующее:
+
+```bash
+relayhost = [smtp.yandex.ru]:587
+
+smtp_use_tls = yes
+smtp_sasl_auth_enable = yes
+smtp_sasl_security_options =
+smtp_sasl_password_maps = hash:/etc/postfix/sasl_passwd
+smtp_tls_CAfile = /etc/ssl/certs/ca-certificates.crt
+
+mynetworks = [::ffff:127.0.0.0]/104 [::1]/128 #эти строки неоходимо заменить
+mailbox_size_limit = 0 #эти строки неоходимо заменить
+recipient_delimiter = + #эти строки неоходимо заменить
+inet_interfaces = all #эти строки неоходимо заменить
+inet_protocols = ipv4 #эти строки неоходимо заменить
+```
