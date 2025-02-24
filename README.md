@@ -285,3 +285,11 @@ table_sizes:  #название метрики
 ```
 sudo apt-get install postfix mailutils -y
 ```
+2. Настройка Postfix
+Создайте файл паролей:
+```
+sudo nano /etc/postfix/sasl_passwd
+```
+Перед настройкой Postfix необходимо иметь пароль приложения. Это делается в разделе безопасности вашей учетной записи почты.
+<img width="568" alt="Снимок экрана 2025-02-24 135449" src="https://github.com/user-attachments/assets/69fc55ed-a9be-4f90-bf06-bf948a371ab8" />
+
