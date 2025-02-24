@@ -205,11 +205,14 @@ table_sizes:  #название метрики
 
 - `Grafana` по адресу `http://localhost:3000`
 
-Чтобы войти в `Grafana` по умолчанию используется ЛОГИН `admin` ПАРОЛЬ `admin` после система предложит вам изменить пароль 
+Чтобы войти в `Grafana` по умолчанию используется ЛОГИН `admin` ПАРОЛЬ `admin` после система предложит вам изменить пароль (если при сборке образа вы не задали другие учетные данные)
 ![2025-02-24_11-56-12](https://github.com/user-attachments/assets/3ab2ec7e-14e9-44a8-a485-b30b0319de57)
 
 
 Проверим работу всех exporter в prometheus.
+
+http://localhost:9090/targets
+
 Убедимся, что `State` у всех `exporter` имеет статус UP 
 
 ![2025-02-23_18-27-32](https://github.com/user-attachments/assets/8e433c92-d37c-484c-8c7a-1a70c54e23a6)
