@@ -290,6 +290,7 @@ sudo nano /etc/postfix/sasl_passwd
 ```
 
 Перед настройкой Postfix необходимо иметь пароль приложения. Это делается в разделе безопасности вашей учетной записи почты.
+
 `'smtp.yandex.ru:587'` - Адрес SMTP-сервера и порт для отправки писем
 
 <img width="568" alt="Снимок экрана 2025-02-24 135449" src="https://github.com/user-attachments/assets/69fc55ed-a9be-4f90-bf06-bf948a371ab8" />
