@@ -175,6 +175,10 @@ table_sizes:  #название метрики
 
 4. Для `prom/alertmanager:v0.25.0` необходимо настроить файлы **`alertmanager.yml`** и **`example.rules.yml`**
 
+- `alertmanager.yml` : Отвечает за управление и доставку алертов (кому и как отправлять уведомления).
+
+- `example.rules.yml` : Определяет условия для генерации алертов (когда и почему срабатывает алерт).
+
 [alertmanager.yml](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/alerts/alertmanager.yml)
 ```yaml
   email_configs:
