@@ -329,3 +329,41 @@ recipient_delimiter = + #эти строки неоходимо заменить
 inet_interfaces = all #эти строки неоходимо заменить
 inet_protocols = ipv4 #эти строки неоходимо заменить
 ```
+
+Далее нужно скомпилировать и хешировать содержимое файла sasl_password, который мы создали ранее, с помощью команды:
+```
+sudo postmap /etc/postfix/sasl_passwd
+```
+Перезапустите Postfix:
+
+```
+sudo systemctl restart postfix  
+```
+
+Включите Postfix для запуска при старте:
+
+```
+sudo systemctl enable postfix
+```
+
+3. Создание оповещения о входе по SSH
+
+Введите команду:
+```
+sudo nano /etc/profile
+```
+
+```bash
+if [ -n "$SSH_CLIENT" ]; then
+    TEXT="$(date): ssh login to ${USER}@$(hostname -f)"
+    TEXT="$TEXT from $(echo $SSH_CLIENT | awk '{print $1}')"
+    echo "$TEXT" | mail -s "ssh login" magazubaev92@gmail.com -a "From:magazubaev92@yandex.ru"
+fi
+
+```
+`magazubaev92@gmail.com` - почта получателя
+`magazubaev92@yandex.ru` - почта отправителя
+
+Проверяем работоспособность
+![2025-02-24_14-13-08](https://github.com/user-attachments/assets/d8743948-12eb-4c5e-a92e-d7caa1ba4f7b)
+
