@@ -199,9 +199,14 @@ table_sizes:  #название метрики
 И убедимся, что все работает.
 <img width="392" alt="Снимок экрана 2025-02-23 175244" src="https://github.com/user-attachments/assets/04073b3f-ac46-4264-a83d-3dda058ecd2d" />
 
-Проверьте работу `Prometheus` по адресу `http://localhost:9090`
+Проверьте работу: 
 
-`Grafana по адресу` `http://localhost:3000`
+- `Prometheus` по адресу `http://localhost:9090`
+
+- `Grafana` по адресу `http://localhost:3000`
+Чтобы войти в `Grafana` по умолчанию используется ЛОГИН `admin` ПАРОЛЬ `admin` после система предложит вам изменить пароль 
+![2025-02-24_11-56-12](https://github.com/user-attachments/assets/3ab2ec7e-14e9-44a8-a485-b30b0319de57)
+
 
 Проверим работу всех exporter в prometheus.
 
@@ -209,8 +214,8 @@ table_sizes:  #название метрики
 
 ![2025-02-23_18-27-32](https://github.com/user-attachments/assets/8e433c92-d37c-484c-8c7a-1a70c54e23a6)
 
-В адресной строке введем `http://localhost:3000` чтобы попасть в интерфейс `Grafana` по умолчанию ЛОГИН `admin` ПАРОЛЬ `admin` после система предложит вам изменить пароль, заходим и добавляем `prometheus` как источник данных 
 
+Добавим источник данных в `Grafana` заходим в раздел `Data sources` и добавляем  `prometheus` в графе `Connection` прописываем `host` и `port`
 ![2025-02-23_18-13-37](https://github.com/user-attachments/assets/54177072-c343-412d-853e-1e9d31f0dc6d)
 наши контейнеры находятся в общей сети `jupyter-network` поэтому обращаемся по названию конрейнера и порту.
 
