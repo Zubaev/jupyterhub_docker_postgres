@@ -249,14 +249,12 @@ table_sizes:  #название метрики
 ### 3.1 Дашборд Активности пользователей и Размера тетрадок Jupyterhub.
 
 Метрики:
-- jupyterhub_total_users - количество зарегистрированых пользователей
-- jupyterhub_active_users{period="24h"} - количество активных пользователей за 24 часа
-- jupyterhub_running_servers - количество запушенных серверов
-- sum(jupyterhub_request_duration_seconds_count) - количество запросов
-- jupyterhub_notebook_file_size_bytes - кастомная метрика [exporter](notebook_metrics/jupyterhub_notebook_files_metrics.py)
+- `jupyterhub_total_users` - количество зарегистрированых пользователей
+- `jupyterhub_active_users{period="24h"}` - количество активных пользователей за 24 часа
+- `jupyterhub_running_servers` - количество запушенных серверов
+- `sum(jupyterhub_request_duration_seconds_count)` - количество запросов
+- `jupyterhub_notebook_file_size_bytes` - кастомная метрика [exporter](notebook_metrics/jupyterhub_notebook_files_metrics.py) которая передает размеры тетрадок jupyterhub
 ![2025-02-23_18-56-03](https://github.com/user-attachments/assets/81e2b3ae-ae0b-46a5-91f7-cdb752cb10c0)
-
-
 
 ### 3.2 Дашборд размера таблиц в PostgreSQL.
 
@@ -265,7 +263,7 @@ table_sizes:  #название метрики
 На графике отражается динамика добавления данных в таблицы, когда и сколько килобайт данных добавлены в таблицу.
 
 Метрика:
-- table_sizes_size_bytes - была определена внутри **[queries.yaml](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/postgres-exporter/queries.yaml)** 
+- `table_sizes_size_bytes` - была определена внутри **[queries.yaml](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/postgres-exporter/queries.yaml)** 
 
 ![2025-02-23_18-35-23](https://github.com/user-attachments/assets/816040f1-cc21-482e-b293-d107974da18e)
 
