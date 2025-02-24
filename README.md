@@ -157,10 +157,9 @@ networks:
 
 1. Для создания полнофункциональной системы мониторинга на основе `Prometheus` и `Grafana` допишем все необходимые образы в [Docker-compose](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/docker-compose.yaml) 
 
+2. Для корректной работы `Prometheus` необходимо определить все `scrape jobs` в файле **[prometheus.yml](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/prometheus/prometheus.yml)**. Этот файл определяет, какие сервисы и эндпоинты Prometheus должен мониторить для сбора метрик. 
 
-2. Для корректной работы **`Prometheus`** необходимо прописать все `scrape jobs` в конфигурационный файл **[prometheus.yml](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/prometheus/prometheus.yml)**. Этот файл определяет, какие сервисы и эндпоинты Prometheus должен мониторить для сбора метрик. 
-
-3. Для работы с образом **`prometheuscommunity/postgres-exporter:v0.10.0`** требуется настроить файл **`queries.yaml`**. Этот файл содержит конфигурацию пользовательских метрик и соответствующие SQL-запросы, которые будут выполняться для сбора данных из базы данных PostgreSQL.
+3. Для работы с образом **`prometheuscommunity/postgres-exporter:v0.10.0`** требуется настроить файл **`queries.yaml`**. Этот файл содержит конфигурацию пользовательских метрик и SQL-запросы, которые будут выполняться для сбора данных из базы данных PostgreSQL. (Взял старую версию v0.10.0 так-как **`queries.yaml`** не используется в последних версиях)
 
 **[queries.yaml](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/postgres-exporter/queries.yaml)**
 ```yaml
