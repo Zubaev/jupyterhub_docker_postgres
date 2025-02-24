@@ -1,4 +1,4 @@
-FROM jupyterhub/jupyterhub:latest
+FROM jupyterhub/jupyterhub:5
 
 RUN pip install --no-cache \ 
     oauthenticator \
