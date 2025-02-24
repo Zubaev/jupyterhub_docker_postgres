@@ -296,5 +296,18 @@ sudo nano /etc/postfix/sasl_passwd
 
 <img width="568" alt="Снимок экрана 2025-02-24 135449" src="https://github.com/user-attachments/assets/69fc55ed-a9be-4f90-bf06-bf948a371ab8" />
 
+Сохраните изменения, а затем измените разрешения файла, так чтобы его мог просматривать только пользователь root:
 
+```
+sudo chmod 600 /etc/postfix/sasl_passwd  
+```
 
+Откройте основной файл конфигурации Postfix:
+
+```
+sudo nano /etc/postfix/main.cf 
+```
+В файле main.cf найдите параметр relayhost и измените строку на:
+```bash
+relayhost = [smtp.yandex.ru]:587 #если вы используете yandex
+```
