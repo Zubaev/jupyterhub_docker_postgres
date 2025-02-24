@@ -352,6 +352,8 @@ sudo systemctl enable postfix
 sudo nano /etc/profile
 ```
 
+В конце файла добавьте следующее:
+
 ```bash
 if [ -n "$SSH_CLIENT" ]; then
     TEXT="$(date): ssh login to ${USER}@$(hostname -f)"
