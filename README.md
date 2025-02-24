@@ -211,7 +211,7 @@ table_sizes:  #название метрики
 
 Проверим работу всех exporter в `prometheus`.
 
-http://localhost:9090/targets
+`http://localhost:9090/targets`
 
 Убедимся, что `State` у всех `exporter` имеет статус UP (значит все `exporter` передают наши метрики в `prometheus`)
 
