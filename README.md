@@ -209,18 +209,31 @@ table_sizes:  #название метрики
 ![2025-02-24_11-56-12](https://github.com/user-attachments/assets/3ab2ec7e-14e9-44a8-a485-b30b0319de57)
 
 
-Проверим работу всех exporter в prometheus.
+Проверим работу всех exporter в `prometheus`.
 
 http://localhost:9090/targets
 
-Убедимся, что `State` у всех `exporter` имеет статус UP 
+Убедимся, что `State` у всех `exporter` имеет статус UP (значит все `exporter` передают наши метрики в `prometheus`)
 
 ![2025-02-23_18-27-32](https://github.com/user-attachments/assets/8e433c92-d37c-484c-8c7a-1a70c54e23a6)
 
 
 Добавим источник данных в `Grafana` заходим в раздел `Data sources` и добавляем  `prometheus` в графе `Connection` прописываем `host` и `port`
 ![2025-02-23_18-13-37](https://github.com/user-attachments/assets/54177072-c343-412d-853e-1e9d31f0dc6d)
-наши контейнеры находятся в общей сети `jupyter-network` поэтому обращаемся по названию конрейнера и порту.
+наши контейнеры находятся в общей сети `jupyter-network` поэтому обращаемся по названию конрейнера и порту(если контейнеры находятся в разных сетях обращаться необходимо по IP либо localhost).
+
+Добавим дашборд для проверки работоспособности:
+
+1. Выберем раздел `dashboards`
+2. Add visualization (Если хотеите импортировать какой то определенный дашборд шелкаем `Import a dashboard` и импортируем необходимы дашборд)
+![2025-02-24_12-10-38](https://github.com/user-attachments/assets/ca8e9add-ed83-4af2-b231-185a79ee395a)
+
+Визуализация метрики:
+
+1. Выбираем метрику.
+2. Выбираем `Lenend` подпись для графиков
+3. Установим необходимую единицу измерения
+![2025-02-24_12-15-12](https://github.com/user-attachments/assets/2f38bb9d-f716-448d-8153-49341a42f01d)
 
 
 Дашборд Активности пользователей и Размера тетрадок Jupyterhub.
