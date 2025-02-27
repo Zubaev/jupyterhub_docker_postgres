@@ -292,7 +292,8 @@ table_sizes:  #название метрики
 
 [публичная ссылка на дашборд](https://snapshots.raintank.io/dashboard/snapshot/HgqHNsnkKNHi8KyBRnbW8gK1iPiueEQO)
 
-![2025-02-23_18-41-34](https://github.com/user-attachments/assets/73330863-d342-48e9-ad1f-38a83d863114)
+![2025-02-27_05-07-23](https://github.com/user-attachments/assets/9f9d5161-6a8b-475f-8a25-430de7527c64)
+
 
 ## 4. Алерты
 
