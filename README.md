@@ -276,17 +276,17 @@ table_sizes:  #название метрики
 
 Метрика - Описание(Название графика)
 
-`sum(rate(container_cpu_usage_seconds_total{instance=~"$host",name=~"$container",name=~".+"}[5m])) by (name) * 100` - среднее использование CPU для каждого контейнера в процентах за последние 5 минут. (CPU Usage)
+`sum(rate(container_cpu_usage_seconds_total{instance=~"$host",name=~"$container",name=~".+"}[5m])) by (name) * 100` - среднее использование CPU для каждого контейнера в процентах за последние 5 минут. (**CPU Usage**)
 
-`sum(container_memory_rss{instance=~"$host",name=~"$container",name=~".+"}) by (name)` - суммарный объем физической памяти используемый каждым контейнером. (Memory Usage)
+`sum(container_memory_rss{instance=~"$host",name=~"$container",name=~".+"}) by (name)` - суммарный объем физической памяти используемый каждым контейнером. (**Memory Usage**)
 
-`sum(container_memory_cache{instance=~"$host",name=~"$container",name=~".+"}) by (name)` - суммарный объем памяти кэша , используемый каждым контейнером. (Memory Cashed)
+`sum(container_memory_cache{instance=~"$host",name=~"$container",name=~".+"}) by (name)` - суммарный объем памяти кэша , используемый каждым контейнером. (**Memory Cashed**)
 
-`sum(rate(container_network_receive_bytes_total{instance=~"$host",name=~"$container",name=~".+"}[5m])) by (name)` - отражает общее количество байтов, принятых контейнером через сеть с момента его запуска. (Received Network Traffic)
+`sum(rate(container_network_receive_bytes_total{instance=~"$host",name=~"$container",name=~".+"}[5m])) by (name)` - отражает общее количество байтов, принятых контейнером через сеть с момента его запуска. (**Received Network Traffic**)
 
-`sum(rate(container_network_transmit_bytes_total{instance=~"$host",name=~"$container",name=~".+"}[5m])) by (name)` - суммарная скорость передачи данных (в байтах в секунду) через сеть для всех контейнеров за последние 5 минут. (Sent Network Traffic)
+`sum(rate(container_network_transmit_bytes_total{instance=~"$host",name=~"$container",name=~".+"}[5m])) by (name)` - суммарная скорость передачи данных (в байтах в секунду) через сеть для всех контейнеров за последние 5 минут. (**Sent Network Traffic**)
 
-`(time() - container_start_time_seconds{instance=~"$host",name=~"$container",name=~".+"})/86400` - время работы контейнера в днях. (Containers Info)
+`(time() - container_start_time_seconds{instance=~"$host",name=~"$container",name=~".+"})/86400` - время работы контейнера в днях. (**Containers Info**)
 
 
 
