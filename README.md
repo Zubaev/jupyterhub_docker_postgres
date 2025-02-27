@@ -255,7 +255,7 @@ table_sizes:  #название метрики
 - `sum(jupyterhub_request_duration_seconds_count)` - количество запросов
 - `jupyterhub_notebook_file_size_bytes` - кастомная метрика [exporter](notebook_metrics/jupyterhub_notebook_files_metrics.py) которая передает размеры тетрадок jupyterhub
 
-[публичная ссылка на дашборд](https://snapshots.raintank.io/dashboard/snapshot/P9tV5hTBZFzloM8cX2jBlB3glaWyQKJh)
+[публичная ссылка на дашборд](http://grafana.zmshardbro.keenetic.name/public-dashboards/ae9326c461d24592882e0aa162dbc6fc)
 
 ![2025-02-23_18-56-03](https://github.com/user-attachments/assets/81e2b3ae-ae0b-46a5-91f7-cdb752cb10c0)
 
@@ -268,7 +268,7 @@ table_sizes:  #название метрики
 Метрика:
 - `table_sizes_size_bytes` - была определена внутри **[queries.yaml](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/postgres-exporter/queries.yaml)**
 
-[публичная ссылка на дашборд](https://snapshots.raintank.io/dashboard/snapshot/XH2PrxkJ3c7D6Optd3imiRqoIVww4RFr)
+[публичная ссылка на дашборд](http://grafana.zmshardbro.keenetic.name/public-dashboards/6dfa9d32535d404091b5f09669a28926)
 
 ![2025-02-23_18-35-23](https://github.com/user-attachments/assets/816040f1-cc21-482e-b293-d107974da18e)
 
@@ -300,7 +300,7 @@ table_sizes:  #название метрики
 ### 4.1 Алерт использования CPU на 80%
 
 Проверим приходят ли оповещения, для проверки работоспособности я временно снизил парог чтобы при загрузке 30% приходил алерт, все работает!)
-![2025-02-23_19-18-26](https://github.com/user-attachments/assets/2ac0fd8d-b1ef-40bc-8785-a40e01720913)
+![2025-02-23_19-18-26](http://grafana.zmshardbro.keenetic.name/public-dashboards/a333d210bd0a4308be838a6eb252d0e1)
 
 ### 4.2 Алерт входа по SSH на сервер.
 
