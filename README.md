@@ -254,7 +254,9 @@ table_sizes:  #название метрики
 - `jupyterhub_running_servers` - количество запушенных серверов
 - `sum(jupyterhub_request_duration_seconds_count)` - количество запросов
 - `jupyterhub_notebook_file_size_bytes` - кастомная метрика [exporter](notebook_metrics/jupyterhub_notebook_files_metrics.py) которая передает размеры тетрадок jupyterhub
-[ссылка на дашборд]([http://localhost:3000/dashboard/snapshot/5mJOKCxRtCP06rHKbYhv96SsXLvvV2Uu](https://snapshots.raintank.io/dashboard/snapshot/P9tV5hTBZFzloM8cX2jBlB3glaWyQKJh))
+
+[ссылка на дашборд](https://snapshots.raintank.io/dashboard/snapshot/P9tV5hTBZFzloM8cX2jBlB3glaWyQKJh)
+
 ![2025-02-23_18-56-03](https://github.com/user-attachments/assets/81e2b3ae-ae0b-46a5-91f7-cdb752cb10c0)
 
 ### 3.2 Дашборд размера таблиц в PostgreSQL.
