@@ -293,7 +293,7 @@ table_sizes:  #название метрики
 
 
 
-[публичная ссылка на дашборд](https://snapshots.raintank.io/dashboard/snapshot/HgqHNsnkKNHi8KyBRnbW8gK1iPiueEQO)
+[публичная ссылка на дашборд](http://grafana.zmshardbro.keenetic.name/public-dashboards/a333d210bd0a4308be838a6eb252d0e1)
 
 ![2025-02-27_05-07-23](https://github.com/user-attachments/assets/9f9d5161-6a8b-475f-8a25-430de7527c64)
 
@@ -303,7 +303,8 @@ table_sizes:  #название метрики
 ### 4.1 Алерт использования CPU на 80%
 
 Проверим приходят ли оповещения, для проверки работоспособности я временно снизил парог чтобы при загрузке 30% приходил алерт, все работает!)
-![2025-02-23_19-18-26](http://grafana.zmshardbro.keenetic.name/public-dashboards/a333d210bd0a4308be838a6eb252d0e1)
+![2025-02-23_19-18-26](https://github.com/user-attachments/assets/87da2c50-77d6-40f7-898e-9194b626afd1)
+
 
 ### 4.2 Алерт входа по SSH на сервер.
 
