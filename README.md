@@ -291,6 +291,8 @@ table_sizes:  #название метрики
 
 `(time() - container_start_time_seconds{instance=~"$host",name=~"$container",name=~".+"})/86400` - время работы контейнера в днях. (**Containers Info**)
 
+Ссылки на публичный дашборд отсутствует из-за того, что Grafana пока не поддерживает шаблонные переменные в публичных дашбордах.
+
 ![2025-02-27_05-07-23](https://github.com/user-attachments/assets/9f9d5161-6a8b-475f-8a25-430de7527c64)
 
 
