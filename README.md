@@ -255,7 +255,7 @@ table_sizes:  #название метрики
 - `sum(jupyterhub_request_duration_seconds_count)` - количество запросов
 - `jupyterhub_notebook_file_size_bytes` - кастомная метрика [exporter](notebook_metrics/jupyterhub_notebook_files_metrics.py) которая передает размеры тетрадок jupyterhub
 
-[ссылка на дашборд](https://snapshots.raintank.io/dashboard/snapshot/P9tV5hTBZFzloM8cX2jBlB3glaWyQKJh)
+[публичная ссылка на дашборд](https://snapshots.raintank.io/dashboard/snapshot/P9tV5hTBZFzloM8cX2jBlB3glaWyQKJh)
 
 ![2025-02-23_18-56-03](https://github.com/user-attachments/assets/81e2b3ae-ae0b-46a5-91f7-cdb752cb10c0)
 
@@ -266,11 +266,16 @@ table_sizes:  #название метрики
 На графике отражается динамика добавления данных в таблицы, когда и сколько килобайт данных добавлены в таблицу.
 
 Метрика:
-- `table_sizes_size_bytes` - была определена внутри **[queries.yaml](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/postgres-exporter/queries.yaml)** 
+- `table_sizes_size_bytes` - была определена внутри **[queries.yaml](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/postgres-exporter/queries.yaml)**
+
+[публичная ссылка на дашборд](https://snapshots.raintank.io/dashboard/snapshot/XH2PrxkJ3c7D6Optd3imiRqoIVww4RFr)
 
 ![2025-02-23_18-35-23](https://github.com/user-attachments/assets/816040f1-cc21-482e-b293-d107974da18e)
 
 ### 3.4 Дашборд используемых ресурсов контейнерами 
+
+[публичная ссылка на дашборд](https://snapshots.raintank.io/dashboard/snapshot/HgqHNsnkKNHi8KyBRnbW8gK1iPiueEQO)
+
 ![2025-02-23_18-41-34](https://github.com/user-attachments/assets/73330863-d342-48e9-ad1f-38a83d863114)
 
 ## 4. Алерты
