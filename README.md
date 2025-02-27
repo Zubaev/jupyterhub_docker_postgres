@@ -291,10 +291,6 @@ table_sizes:  #название метрики
 
 `(time() - container_start_time_seconds{instance=~"$host",name=~"$container",name=~".+"})/86400` - время работы контейнера в днях. (**Containers Info**)
 
-
-
-[публичная ссылка на дашборд](http://grafana.zmshardbro.keenetic.name/public-dashboards/a333d210bd0a4308be838a6eb252d0e1)
-
 ![2025-02-27_05-07-23](https://github.com/user-attachments/assets/9f9d5161-6a8b-475f-8a25-430de7527c64)
 
 
