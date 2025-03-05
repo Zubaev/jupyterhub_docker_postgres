@@ -87,16 +87,19 @@
 
 Регистрации нового пользователя
 
-1. Задаем имя пользователя в поле `Username`.
+Задаем имя пользователя в поле `Username` и пароль в поле `Password` повторяем пароль в поле `Confirm password` нажимаем `Create User`.
 
-1.1 Задаем пароль, внизу повторяем пароль и нажимаем `Create User`
+Сверху видим надпись подтверждения регистрации
 
-3. Сверху видим надпись подтверждения регистрации
+Первым регистрируем администратора которого мы задали в конфигурационном файле [jupyterhub_config.py](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/jupyterhub/jupyterhub_config.py)
 
-![2025-03-05_23-08-53](https://github.com/user-attachments/assets/1fc00d5c-9909-4e6b-a59b-709de2f345e2)
+Далее Региструем еще двух пользователей точно так же User1 и User2.
+
+![2025-03-05_23-08-53](https://github.com/user-attachments/assets/c5c16b42-4191-41c8-baf6-ae76873f23a6)
 
 
-Список зарегистрированных пользователей 
+
+Список зарегистрированных пользователей можно провенрить на панели администратора `http://localhost:8000/hub/admin#/`
 
 ![2025-02-23_12-22-58](https://github.com/user-attachments/assets/43c0fcd2-d77e-44b6-82ff-9d11ad7a4cd8)
 
