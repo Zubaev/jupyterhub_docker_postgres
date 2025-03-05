@@ -66,51 +66,15 @@
 ***
 Для взаимодействия Postgres и Jupyterhub на основе базового образа составлен [Dockerfile](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/notebook_custom/Dockerfile.not) для сборки кастомного образа с библиотекой psycopg2-binary которая позволяет сооединяться тетрадкам jupyterhub c Postgres
 
-Соберем [docker-compose](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/jupyterhub/docker-compose.yaml) файл, с необходимыми настройками.
+Соберем [docker-compose](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/jupyterhub/docker-compose.yaml) файл с необходимыми настройками.
 Контейнеры добавим в общую сеть `jupyter-network` 
 
 Запустим сборку командой `docker-compose up -d` 
 
 <img width="671" alt="Снимок экрана 2025-03-05 224350" src="https://github.com/user-attachments/assets/6ed08900-cacd-481a-a91c-6ee0ccb366d9" />
 
-***
 
 
-
-
-Ниже описан Docker-compose сборки
-```yaml
-services:
-  db_postgres:
-    image: postgres:16
-    volumes:
-    - /var/lib/postgresql/data:/var/lib/postgresql/data
-    container_name: zubaev
-    environment:
-      POSTGRES_USER: zms
-      POSTGRES_PASSWORD: 123456
-      POSTGRES_DB: test_db
-    ports:
-      - "5434:5432"
-    restart: unless-stopped
-    networks:
-      - jupyter-network
-  jupyterhub:
-    build: .
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-      - /srv/jupyterhub/data:/srv/jupyterhub/data
-      - ./jupyterhub_config.py:/srv/jupyterhub/jupyterhub_config.py
-    ports:
-      - "8000:8000"
-    networks:
-      - jupyter-network
-volumes:
-  jupyterhub_data:
-networks:
-  jupyter-network:
-    name: jupyter-network
-```
 ***
 
 ## 2. Скриншоты
