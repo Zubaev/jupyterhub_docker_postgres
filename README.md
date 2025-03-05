@@ -65,7 +65,18 @@
 **Postgres** взят оффициальный образ postgres:16
 ***
 Для взаимодействия Postgres и Jupyterhub на основе базового образа составлен [Dockerfile](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/notebook_custom/Dockerfile.not) для сборки кастомного образа с библиотекой psycopg2-binary которая позволяет сооединяться тетрадкам jupyterhub c Postgres
+
+Соберем [docker-compose](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/jupyterhub/docker-compose.yaml) файл, с необходимыми настройками.
+Контейнеры добавим в общую сеть `jupyter-network` 
+
+Запустим сборку командой `docker-compose up -d` 
+
+<img width="671" alt="Снимок экрана 2025-03-05 224350" src="https://github.com/user-attachments/assets/6ed08900-cacd-481a-a91c-6ee0ccb366d9" />
+
 ***
+
+
+
 
 Ниже описан Docker-compose сборки
 ```yaml
