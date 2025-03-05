@@ -115,12 +115,10 @@
 
 ***
 
-
-
-
-
-
 Создание таблицы в Postgres через Jupyterhub 
+
+1. Для начала необходимо импортировать библиотеку `connect` из модуля `psycopg2` (Для того чтобы модуль импортировался, его необходимо заранее добавить в ваш [notebook](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/notebook_custom/Dockerfile.not) заранее собрать образ на Локальной машине, затем уже добавить его в [конфигурационный файл](https://github.com/Zubaev/jupyterhub_docker_postgres/blob/main/jupyterhub/jupyterhub_config.py) иначе импорт библиотеки работать не будет)
+2. Далее прописываем все необходимые настройки для соеденинения(В `DBeaver` использовался  **ПОРТ** `5434`, а теперь `5432` и вместо `localhost` мы используем имя контейнера `db_postgres` потому что оба контейнера у нас находятся в одной подсети)
 
 ![2025-02-23_12-40-58](https://github.com/user-attachments/assets/9a935283-c2c0-4817-8a32-accd323e8d9e)
 
