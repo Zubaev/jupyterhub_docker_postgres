@@ -268,9 +268,7 @@ table_sizes:  #название метрики
 
 [публичная ссылка на дашборд](http://grafana.zmshardbro.keenetic.name/public-dashboards/ae9326c461d24592882e0aa162dbc6fc)
 
-![2025-03-06_01-50-28](https://github.com/user-attachments/assets/c4130288-d26f-477f-9599-0379afefda4f)
-
-
+![2025-03-06_01-50-28](https://github.com/user-attachments/assets/2b1aa149-7dc3-4ae6-804a-97999e625bfa)
 
 ### 3.2 Дашборд активности пользователей.
 
