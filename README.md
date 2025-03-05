@@ -78,7 +78,8 @@
 
 `http://localhost:8000`
 
-![2025-02-23_12-15-28](https://github.com/user-attachments/assets/5adf3368-138a-4ee7-bd18-d04762a56f8c)
+![2025-03-05_23-05-46](https://github.com/user-attachments/assets/8f593a5e-277d-4c44-9a3f-0dc4f60c66c5)
+
 
 ***
 
