@@ -73,7 +73,12 @@
 
 <img width="671" alt="Снимок экрана 2025-03-05 224350" src="https://github.com/user-attachments/assets/6ed08900-cacd-481a-a91c-6ee0ccb366d9" />
 
+Если все сделано правильно `Jupyterhub` будем доступен по адресу  
 
+
+`http://localhost:8000`
+
+![2025-02-23_12-15-28](https://github.com/user-attachments/assets/5adf3368-138a-4ee7-bd18-d04762a56f8c)
 
 ***
 
