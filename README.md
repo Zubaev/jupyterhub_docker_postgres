@@ -74,12 +74,7 @@
 
 <img width="671" alt="Снимок экрана 2025-03-05 224350" src="https://github.com/user-attachments/assets/6ed08900-cacd-481a-a91c-6ee0ccb366d9" />
 
-Если все сделано правильно 
-
-`Jupyterhub` будем доступен по адресу  
-
-
-`http://localhost:8000`
+Если все сделано правильно вбиваем в браузере `http://localhost:8000` и мы должны увидеть
 
 ![2025-03-05_23-05-46](https://github.com/user-attachments/assets/8f593a5e-277d-4c44-9a3f-0dc4f60c66c5)
 
@@ -87,6 +82,8 @@
 ***
 
 ## 2. Регистрации пользователей jupyterhub
+
+Для регистрации нового пользователя в браузере вбиваем `http://localhost:8000`
 
 Задаем имя пользователя в поле `Username` и пароль в поле `Password` повторяем пароль в поле `Confirm password` 
 
