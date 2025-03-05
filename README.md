@@ -283,7 +283,7 @@ table_sizes:  #название метрики
 
 [публичная ссылка на дашборд](http://grafana.zmshardbro.keenetic.name/public-dashboards/6dfa9d32535d404091b5f09669a28926)
 
-![2025-02-23_18-35-23](https://github.com/user-attachments/assets/816040f1-cc21-482e-b293-d107974da18e)
+![2025-03-06_01-09-28](https://github.com/user-attachments/assets/ea559b7e-b52b-4e29-a1b4-657fb98a100e)
 
 ### 3.4 Дашборд используемых ресурсов контейнерами 
 
