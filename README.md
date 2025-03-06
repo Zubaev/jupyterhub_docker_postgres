@@ -262,9 +262,11 @@ table_sizes:  #название метрики
 ## 3. Дашборды
 ### 3.1 Дашборд размера тетрадок Jupyterhub.
 
-Метрики:
+Метрика:
 
 - `jupyterhub_notebook_file_size_bytes` - кастомная метрика [exporter](notebook_metrics/jupyterhub_notebook_files_metrics.py) которая передает размеры тетрадок jupyterhub
+
+Дашборд состоит из горизонтальной гистаграммы которая отражает размеры ноутбуков а так же временного ряда который позволит мониторить динамику
 
 [публичная ссылка на дашборд](http://grafana.zmshardbro.keenetic.name/public-dashboards/ae9326c461d24592882e0aa162dbc6fc)
 
