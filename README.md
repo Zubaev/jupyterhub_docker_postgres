@@ -275,8 +275,12 @@ table_sizes:  #название метрики
 - `jupyterhub_total_users` - количество зарегистрированых пользователей
 - `jupyterhub_active_users{period="24h"}` - количество активных пользователей за 24 часа
 - `jupyterhub_running_servers` - количество запушенных серверов
-- `sum(jupyterhub_request_duration_seconds_count)` - количество запросов
+- `jupyterhub_request_duration_seconds_count{code="302", handler="nativeauthenticator.handlers.LoginHandler", method="POST"}` - Количество успешных авторизаций
+- `jupyterhub_request_duration_seconds_count{code="200", handler="nativeauthenticator.handlers.LoginHandler", method="POST"}` - Количество неудачных авторизаций
 
+[ссылка на публичный дашборд](http://grafana.zmshardbro.keenetic.name/d/AN4KQwWiz/jupyterhub?orgId=1&from=now-3h&to=now&timezone=browser&refresh=30s)
+
+![2025-03-06_04-06-26](https://github.com/user-attachments/assets/32bbde3b-47ab-4bd1-8460-af89013303f8)
 
 
 ### 3.2 Дашборд размера таблиц в PostgreSQL.
